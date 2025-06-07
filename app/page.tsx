@@ -34,6 +34,7 @@ export default function Home() {
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
+
         const res = await fetch("/api/reserve", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -44,7 +45,7 @@ export default function Home() {
             alert("Бронь успешно создана!");
         } else {
             const error = await res.text();
-            alert(`Ошибка: ${error}`);
+            alert(`${error}`);
         }
     };
 
@@ -75,7 +76,7 @@ export default function Home() {
                             <option value="">Выберите стол</option>
                             {tables.map(t => (
                                 <option key={t.id} value={t.id}>
-                                    {t.number}
+                                    {t.number} - {t.peopleCount} мест
                                 </option>
                             ))}
                         </select>

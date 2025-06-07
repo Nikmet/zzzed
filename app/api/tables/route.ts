@@ -1,6 +1,6 @@
 // app/api/tables/route.ts
 export async function GET() {
-    const res = await fetch("http://81.27.55.79/Zzzed/hs/tables/getTables", {
+    const res = await fetch("http://localhost/Zzzed/hs/tables/getTables", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",

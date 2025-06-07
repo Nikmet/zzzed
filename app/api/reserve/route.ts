@@ -2,7 +2,7 @@
 export async function POST(req: Request) {
     const body = await req.json();
 
-    const res = await fetch("http://81.27.55.79/Zzzed/hs/tables/createReserve", {
+    const res = await fetch("http://localhost/Zzzed/hs/tables/createReserve", {
         method: "POST",
         headers: {
             Authorization: "Basic QWRtaW46MTIz"
